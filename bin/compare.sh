@@ -1,6 +1,6 @@
 #!/bin/bash
 
-GAMES=100
+GAMES=10
 
 echo "Running $GAMES games between $1 and $2, it may take some time..."
 
@@ -13,7 +13,7 @@ cd comparison
 
 # We point here to the halite binary. If you are not doing this on OS X, please go to Halite website to download
 # a build
-HALITE_BINARY=../bin/halite
+HALITE_BINARY=../../halite
 
 for x in $(seq 1 $GAMES); do
 # run a game

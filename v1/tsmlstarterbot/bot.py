@@ -26,7 +26,6 @@ class Bot:
 
         # Initialize the game.
         game = hlt.Game(self._name)
-        idx = 0
 
         while True:
             # Update the game map.
@@ -34,7 +33,7 @@ class Bot:
             start_time = time.time()
 
             # Produce features for each planet.
-            features = self.produce_features(game_map, idx)
+            features = self.produce_features(game_map)
 
             # Find predictions which planets we should send ships to.
             predictions = self._neural_net.predict(features)
@@ -47,9 +46,8 @@ class Bot:
 
             # Send the command.
             game.send_command_queue(instructions)
-            idx += 1
 
-    def produce_features(self, game_map, idx):
+    def produce_features(self, game_map):
         """
         For each planet produce a set of features that we will feed to the neural net. We always return an array
         with PLANET_MAX_NUM rows - if planet is not present in the game, we set all featurse to 0.
@@ -109,8 +107,7 @@ class Bot:
                 ownership,
                 distance_from_center,
                 health_weighted_ship_distance,
-                is_active,
-                idx
+                is_active
             ]
 
         return feature_matrix
