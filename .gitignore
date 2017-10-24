@@ -1,4 +1,8 @@
-
 .DS_Store
 .idea/
 submission.zip
+bin/comparison/
+data/
+*.hlt
+*.log
+
