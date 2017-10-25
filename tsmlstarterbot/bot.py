@@ -108,8 +108,7 @@ class Bot:
                 ownership,
                 distance_from_center,
                 health_weighted_ship_distance,
-                is_active,
-                idx]
+                is_active]
 
         return feature_matrix
 

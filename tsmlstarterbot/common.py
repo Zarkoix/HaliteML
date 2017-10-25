@@ -15,8 +15,7 @@ FEATURE_NAMES = [
     "ownership",
     "distance_from_center",
     "weighted_average_distance_from_friendly_ships",
-    "is_active",
-    "frame_index"]
+    "is_active"]
 
 # Number of initial features per planet we have
 PER_PLANET_FEATURES = len(FEATURE_NAMES)
