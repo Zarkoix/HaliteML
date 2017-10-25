@@ -27,7 +27,6 @@ class Bot:
         # Initialize the game.
         game = hlt.Game(self._name)
         idx = 0
-
         while True:
             # Update the game map.
             game_map = game.update_map()
@@ -110,8 +109,7 @@ class Bot:
                 distance_from_center,
                 health_weighted_ship_distance,
                 is_active,
-                idx
-            ]
+                idx]
 
         return feature_matrix
 

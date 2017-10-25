@@ -62,7 +62,7 @@ def main():
     parser = argparse.ArgumentParser(description="Halite II training")
     parser.add_argument("--model_name", help="Name of the model")
     parser.add_argument("--minibatch_size", type=int, help="Size of the minibatch", default=100)
-    parser.add_argument("--steps", type=int, help="Number of steps in the training", default=100)
+    parser.add_argument("--steps", type=int, help="Number of steps in the training", default=200)
     parser.add_argument("--data", help="Data directory or zip file containing uncompressed games")
     parser.add_argument("--cache", help="Location of the model we should continue to train")
     parser.add_argument("--games_limit", type=int, help="Train on up to games_limit games", default=1000)

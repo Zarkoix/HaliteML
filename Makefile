@@ -32,7 +32,7 @@ clean_model:
 
 clean_data:
 	rm -rf data
-v
+
 real_clean: clean_model clean_data
 	rm -f submission.zip
 	rm -f bin/halite
