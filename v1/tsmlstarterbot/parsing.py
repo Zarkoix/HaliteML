@@ -55,7 +55,7 @@ def find_target_planet(bot_id, current_frame, planets, move):
         planet_x = planet_data['x']
         planet_y = planet_data['y']
         a = angle(planet_x - ship_x, planet_y - ship_y)
-        # We try to find the planet with minimal angle distance TODO ray trace to find better planet analysis, obviously not heading through planets
+        # We try to find the planet with minimal angle distance
         if optimal_planet == -1 or angle_dist(ship_angle, a) < angle_dist(ship_angle, optimal_angle):
             optimal_planet = planet_id
             optimal_angle = a
@@ -255,8 +255,7 @@ def parse(all_games_json_data, bot_to_imitate=None, dump_features_location=None)
                     ownership,
                     distance_from_center,
                     average_distance,
-                    is_active,
-                    idx]
+                    is_active]
 
             game_training_data.append((planet_features, allocations))
         training_data.append(game_training_data)

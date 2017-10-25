@@ -23,8 +23,8 @@ def normalize_input(input_data):
 
 
 class NeuralNet(object):
-    FIRST_LAYER_SIZE = 18
-    SECOND_LAYER_SIZE = 9
+    FIRST_LAYER_SIZE = 12
+    SECOND_LAYER_SIZE = 6
 
     def __init__(self, cached_model=None, seed=None):
         self._graph = tf.Graph()
