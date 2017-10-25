@@ -3,6 +3,7 @@
 submission.zip
 bin/comparison/
 data/
+virtualenv
 *.hlt
 *.log
 
