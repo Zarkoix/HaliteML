@@ -255,7 +255,8 @@ def parse(all_games_json_data, bot_to_imitate=None, dump_features_location=None)
                     ownership,
                     distance_from_center,
                     average_distance,
-                    is_active]
+                    is_active,
+                    idx]
 
             game_training_data.append((planet_features, allocations))
         training_data.append(game_training_data)
